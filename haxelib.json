@@ -1,0 +1,14 @@
+{
+    "name": "asset_pack_bundle",
+    "url": "",
+    "license": "MIT",
+    "tags": ["apk","bundle","sdk"],
+    "description": "Used for Apk Bundle subcontracting",
+    "version": "1.0.0",
+    "releasenote": "",
+    "contributors": ["rainy"],
+    "classPath": "src",
+    "dependencies": {
+  
+    }
+  }

@@ -1,0 +1,3 @@
+<project>
+    <dependency name="asset_pack" path="dependencies/android" if="android" />
+</project>
