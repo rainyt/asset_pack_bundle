@@ -1,10 +1,5 @@
 # Assets pack bundle
 
-# 基础配置
-```xml
-<set name="asset_pack_name" value="assets_pack" />
-```
-
 ## 配置分包资源
 ```haxe
 #if (android && asset_pack_bundle)

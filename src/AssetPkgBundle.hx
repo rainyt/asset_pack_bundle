@@ -1,3 +1,5 @@
+import haxe.io.Path;
+import haxe.macro.Compiler;
 import haxe.macro.Context;
 #if macro
 import sys.FileSystem;
@@ -14,8 +16,10 @@ class AssetPkgBundle {
 	 * @return Array<Field>
 	 */
 	macro public static function split(assets:Array<String>):Array<Field> {
-		var spistDir = Sys.getCwd() + "Export/android/bin/deps/asset_pack_name/src/main/assets";
-		var dir = Sys.getCwd() + "Export/android/bin/app/src/main/assets";
+		var path = Path.join([Path.directory(Compiler.getOutput()), "bin"]);
+		var spistDir = Path.join([path, "/deps/asset_pack/src/main/assets"]);
+		var dir = Path.join([path, "/app/src/main/assets"]);
+		trace('split assets: $spistDir, dir: $dir');
 		for (s in assets) {
 			copyFile(dir + "/" + s, spistDir + "/" + s);
 			removeDir(dir + "/" + s);
