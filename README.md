@@ -8,3 +8,11 @@
 #end
 class Main {}
 ```
+
+## 根目录的build.gradle
+需要新增配置：
+```gradle
+android {
+    assetPacks = [":deps:asset_pack"]
+}
+```
